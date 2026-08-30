@@ -1,0 +1,16 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Dependencias / compilados si se incorporan en el futuro
+node_modules/
+dist/
+build/
+
+# Archivos temporales
+*.log
+*.tmp

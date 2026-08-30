@@ -10,19 +10,14 @@
     </title>
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="assets/css/estilos.css" rel="stylesheet" />
+    <link href="../assets/css/estilos.css" rel="stylesheet" />
 </head>
 
 <body data-pagina="citas">
     <header>
-        <nav aria-label="Navegaci&oacute;n principal" class="navbar navbar-expand-lg navbar-vet sticky-top">
+        <nav aria-label="Navegaci&oacute;n principal" class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
             <div class="container py-2">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <span class="brand-logo">
-                        <i class="bi bi-heart-pulse-fill">
-                        </i>
-                    </span>
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
                     <span class="brand-wordmark">
                         Vet
                         <b>
@@ -32,19 +27,19 @@
                 </a>
                 <button aria-controls="menuPrincipal" aria-label="Abrir men&uacute;" class="navbar-toggler"
                     data-bs-target="#menuPrincipal" data-bs-toggle="collapse" type="button">
-                    <span class="navbar-toggler-icon">
-                    </span>
+                    <span class="small fw-semibold">Menú</span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav mx-lg-auto mb-3 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" data-pagina-nav="inicio" href="index.html">Inicio</a>
+                            <a class="nav-link" data-pagina-nav="inicio" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-pagina-nav="servicios" href="servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-pagina-nav="citas" href="citas.html">Reservar cita</a>
+                            <a class="nav-link" data-pagina-nav="citas" href="citas.html">Reservar
+                                cita</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-pagina-nav="contacto" href="contacto.html">Contacto</a>
@@ -53,7 +48,7 @@
                     <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2"
                         id="zonaUsuario">
                         <a class="nav-link" href="login.html">Iniciar sesión</a>
-                        <a class="btn btn-vet-primary btn-sm px-3" href="registro.html">Crear cuenta</a>
+                        <a class="btn btn-primary btn-sm px-3" href="registro.html">Crear cuenta</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +56,7 @@
     </header>
     <main class="container py-5 ancho-contenido-citas">
         <header class="text-center mb-5">
-            <p class="text-uppercase small fw-semibold text-principal mb-2">
+            <p class="text-uppercase small fw-semibold text-primary mb-2">
                 Reserva online
             </p>
             <h1 class="display-6 font-heading">
@@ -71,53 +66,48 @@
                 Selecciona servicio, mascota, fecha y un horario disponible.
             </p>
         </header>
-        <div class="card tarjeta-vet d-none" id="mensajeInicioSesion">
+        <div class="card shadow-sm d-none" id="mensajeInicioSesion">
             <div class="card-body p-5 text-center">
-                <i class="bi bi-person-lock display-5 text-principal">
-                </i>
                 <h2 class="h4 font-heading mt-3">
                     Inicia sesi&oacute;n para reservar
                 </h2>
                 <p class="text-secondary">
                     Necesitamos tu cuenta para asociar la cita con tus datos.
                 </p>
-                <a class="btn btn-vet-primary" href="login.html?redirect=citas.html">
+                <a class="btn btn-primary" href="login.html?redirect=citas.html">
                     Iniciar sesi&oacute;n
                 </a>
             </div>
         </div>
-        <div class="card tarjeta-vet d-none" id="mensajeSinMascotas">
+        <div class="card shadow-sm d-none" id="mensajeSinMascotas">
             <div class="card-body p-5 text-center">
-                <i class="bi bi-heart display-5 text-principal">
-                </i>
                 <h2 class="h4 font-heading mt-3">
                     Primero registra una mascota
                 </h2>
                 <p class="text-secondary">
                     Registra a tu mascota para poder continuar.
                 </p>
-                <a class="btn btn-vet-primary" href="mascota.html?from=cita">
+                <a class="btn btn-primary" href="mascota.html?from=cita">
                     Registrar mascota
                 </a>
             </div>
         </div>
         <div class="d-none" id="formularioCita">
-            <div class="card tarjeta-vet d-none mb-4" id="mensajeExitoCita">
+            <div class="card shadow-sm d-none mb-4" id="mensajeExitoCita">
                 <div class="card-body p-5 text-center">
-                    <i class="bi bi-check-circle-fill display-5 text-success">
-                    </i>
                     <h2 class="h4 font-heading mt-3">
                         &iexcl;Cita solicitada!
                     </h2>
                     <p class="text-secondary">
-                        Tu solicitud qued&oacute; registrada y ser&aacute; gestionada por la cl&iacute;nica.
+                        Tu solicitud qued&oacute; registrada y ser&aacute; gestionada por la
+                        cl&iacute;nica.
                     </p>
-                    <a class="btn btn-vet-primary" href="reservas.html">
+                    <a class="btn btn-primary" href="reservas.html">
                         Ver mis reservas
                     </a>
                 </div>
             </div>
-            <div class="card tarjeta-vet" id="tarjetaReserva">
+            <div class="card shadow-sm" id="tarjetaReserva">
                 <div class="card-body p-4 p-lg-5">
                     <div class="row g-5">
                         <section aria-labelledby="tituloServicioCita" class="col-lg-5">
@@ -139,9 +129,7 @@
                             </p>
                             <div class="row g-2" id="opcionesMascotas">
                             </div>
-                            <a class="small text-principal d-inline-block mt-2" href="mascota.html?from=cita">
-                                <i class="bi bi-plus-circle me-1">
-                                </i>
+                            <a class="small text-primary d-inline-block mt-2" href="mascota.html?from=cita">
                                 Registrar otra mascota
                             </a>
                             <hr class="my-4" />
@@ -175,7 +163,7 @@
                                     rows="3"></textarea>
                             </div>
                             <div
-                                class="bg-principal-suave rounded-3 p-3 mt-4 d-flex flex-column flex-md-row justify-content-between gap-3 align-items-md-center">
+                                class="bg-primary-subtle rounded-3 p-3 mt-4 d-flex flex-column flex-md-row justify-content-between gap-3 align-items-md-center">
                                 <div>
                                     <strong class="small">
                                         Resumen
@@ -184,9 +172,7 @@
                                         Selecciona las opciones para continuar.
                                     </div>
                                 </div>
-                                <button class="btn btn-vet-primary" disabled="" id="botonConfirmarCita" type="button">
-                                    <i class="bi bi-calendar-check me-1">
-                                    </i>
+                                <button class="btn btn-primary" disabled="" id="botonConfirmarCita" type="button">
                                     Confirmar cita
                                 </button>
                             </div>
@@ -196,15 +182,11 @@
             </div>
         </div>
     </main>
-    <footer class="pie-pagina mt-5">
+    <footer class="border-top py-4 bg-white mt-5">
         <div class="container py-5">
             <div class="row g-4">
                 <div class="col-lg-5">
                     <div class="d-flex align-items-center gap-2 mb-3">
-                        <span class="brand-logo">
-                            <i class="bi bi-heart-pulse-fill">
-                            </i>
-                        </span>
                         <span class="brand-wordmark">
                             Vet
                             <b>
@@ -216,7 +198,8 @@
                         Cuidamos de quienes forman parte de tu familia.
                     </h2>
                     <p class="small text-secondary mb-0">
-                        Cl&iacute;nica veterinaria especializada con reserva digital y seguimiento de tus mascotas.
+                        Cl&iacute;nica veterinaria especializada con reserva digital y seguimiento de
+                        tus mascotas.
                     </p>
                 </div>
                 <div class="col-sm-6 col-lg-3">
@@ -225,7 +208,7 @@
                     </h2>
                     <ul class="list-unstyled small d-grid gap-2 mb-0">
                         <li>
-                            <a href="index.html">
+                            <a href="../index.html">
                                 Inicio
                             </a>
                         </li>
@@ -252,29 +235,21 @@
                     </h2>
                     <ul class="list-unstyled small text-secondary d-grid gap-2 mb-0">
                         <li>
-                            <i class="bi bi-telephone me-2">
-                            </i>
                             +51 900 000 000
                         </li>
                         <li>
-                            <i class="bi bi-envelope me-2">
-                            </i>
                             hola@vetlife.pe
                         </li>
                         <li>
-                            <i class="bi bi-clock me-2">
-                            </i>
                             Lun&ndash;Vie 8:00&ndash;18:00 &middot; S&aacute;b 8:00&ndash;13:00
                         </li>
                         <li>
-                            <i class="bi bi-geo-alt me-2">
-                            </i>
                             Piura, Per&uacute;
                         </li>
                     </ul>
                 </div>
             </div>
-            <hr class="border-vet my-4" />
+            <hr class="border my-4" />
             <div class="small text-secondary d-flex flex-column flex-md-row justify-content-between gap-2">
                 <span>
                     &copy; 2026 VetLife. Proyecto frontend demostrativo.
@@ -285,16 +260,16 @@
             </div>
         </div>
     </footer>
-    <div class="toast-vet" id="contenedorToast">
+    <div class="position-fixed end-0 bottom-0 m-3" id="contenedorToast">
     </div>
-    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYjR+WVcXK/BmnVDxM+D2scQbITxI"
+    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
         </script>
-    <script src="assets/js/datos.js"></script>
-    <script src="assets/js/utilidades.js"></script>
-    <script src="assets/js/autenticacion.js"></script>
-    <script src="assets/js/citas.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/datos.js"></script>
+    <script src="../assets/js/utilidades.js"></script>
+    <script src="../assets/js/autenticacion.js"></script>
+    <script src="../assets/js/citas.js"></script>
+    <script src="../assets/js/app.js"></script>
 </body>
 
 </html>
