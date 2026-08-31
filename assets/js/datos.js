@@ -4,22 +4,18 @@ window.VetLifeDatos = {
     { usuario: 'admin@vetlife.com', contrasena: 'admin123', nombre: 'Dra. Ramírez', correo: 'admin@vetlife.com' }
   ],
   servicios: [
-    { id:'S-01', nombre:'Consulta General', categoria:'Medicina Interna', duracion:30, precio:40, activo:true },
-    { id:'S-02', nombre:'Consulta Especializada', categoria:'Medicina Interna', duracion:45, precio:55, activo:true },
-    { id:'S-03', nombre:'Ecografía Abdominal', categoria:'Imagen', duracion:30, precio:45, activo:true },
-    { id:'S-04', nombre:'Radiografía Digital', categoria:'Imagen', duracion:20, precio:35, activo:true },
-    { id:'S-05', nombre:'Tomografía Computada', categoria:'Imagen', duracion:60, precio:180, activo:true },
-    { id:'S-06', nombre:'Resonancia Magnética', categoria:'Imagen', duracion:90, precio:250, activo:false },
-    { id:'S-07', nombre:'Hemograma Completo', categoria:'Laboratorio', duracion:120, precio:20, activo:true },
-    { id:'S-08', nombre:'Bioquímica Sérica', categoria:'Laboratorio', duracion:180, precio:30, activo:true },
-    { id:'S-09', nombre:'Uroanálisis', categoria:'Laboratorio', duracion:60, precio:15, activo:true },
-    { id:'S-10', nombre:'Cultivo Bacteriano', categoria:'Laboratorio', duracion:2880, precio:50, activo:true },
-    { id:'S-11', nombre:'Ecocardiografía', categoria:'Cardiología', duracion:45, precio:95, activo:true },
-    { id:'S-12', nombre:'Electrocardiograma', categoria:'Cardiología', duracion:20, precio:40, activo:true },
-    { id:'S-13', nombre:'Limpieza Dental', categoria:'Odontología', duracion:40, precio:70, activo:true },
-    { id:'S-14', nombre:'Extracción Dental', categoria:'Odontología', duracion:45, precio:50, activo:true },
-    { id:'S-15', nombre:'Castración / Esterilización', categoria:'Cirugía', duracion:60, precio:120, activo:true },
-    { id:'S-16', nombre:'Cirugía de Tejidos Blandos', categoria:'Cirugía', duracion:120, precio:200, activo:true }
+
+    { id:'S-01', nombre:'Laparoscopía', categoria:'Cirugía', duracion:60, precio:180, activo:true, icono:'bi-camera-reels', descripcion:'Cirugías mínimamente invasivas con recuperación más rápida y segura.' },
+    { id:'S-02', nombre:'Cardiología', categoria:'Medicina Interna', duracion:45, precio:55, activo:true, icono:'bi-heart-pulse', descripcion:'Evaluación y seguimiento de la salud cardiovascular de tu mascota.' },
+    { id:'S-03', nombre:'Endoscopia', categoria:'Imagenología', duracion:30, precio:45, activo:true, icono:'bi-camera-video', descripcion:'Exploración interna precisa sin necesidad de cirugía abierta.' },
+    { id:'S-04', nombre:'Ginecología', categoria:'Medicina Interna', duracion:45, precio:95, activo:true, icono:'bi-gender-female', descripcion:'Salud reproductiva, gestación y control hormonal especializado.' },
+    { id:'S-05', nombre:'Traumatología', categoria:'Cirugía', duracion:60, precio:150, activo:true, icono:'bi-bandaid', descripcion:'Diagnóstico y tratamiento de fracturas, luxaciones y lesiones óseas.' },
+    { id:'S-06', nombre:'Patología', categoria:'Medicina Interna', duracion:20, precio:40, activo:true, icono:'bi-clipboard2-pulse', descripcion:'Análisis de tejidos y muestras para diagnósticos certeros.' },
+    { id:'S-07', nombre:'Anestesia Inhalatoria', categoria:'Cirugía', duracion:180, precio:30, activo:true, icono:'bi-lungs', descripcion:'Procedimientos seguros con monitoreo constante durante la sedación.' },
+    { id:'S-08', nombre:'Ecografía', categoria:'Imagenología', duracion:20, precio:35, activo:true, icono:'bi-soundwave', descripcion:'Imágenes en tiempo real para un diagnóstico rápido y sin dolor.' },
+    { id:'S-09', nombre:'Rayos X Digital', categoria:'Imagenología', duracion:30, precio:60, activo:true, icono:'bi-radioactive', descripcion:'Radiografías digitales de alta resolución para diagnóstico inmediato.' },
+    { id:'S-10', nombre:'Laboratorio', categoria:'Diagnóstico', duracion:120, precio:20, activo:true, icono:'bi-droplet', descripcion:'Análisis clínicos completos con resultados confiables y oportunos.' },
+    { id:'S-11', nombre:'Hospitalización', categoria:'Cuidados', duracion:1440, precio:120, activo:true, icono:'bi-hospital', descripcion:'Cuidado intensivo y monitoreo continuo en casos que lo requieran.' }
   ],
   pacientesDemo: [
     {id:'P-001',nombre:'Luna',especie:'Perro',raza:'Border Collie',edad:'4 años',propietario:'María González',telefono:'+51 900 111 223',ultimaVisita:'2026-08-20',visitas:12,estado:'activo'},
