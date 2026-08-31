@@ -15,16 +15,7 @@
   ];
 
   const HORARIOS_BLOQUEADOS = ['09:00', '10:30', '14:00', '15:30'];
-
-  const ICONOS_ESPECIE = {
-    Perro: '🐶',
-    Gato: '🐱',
-    Ave: '🦜',
-    Conejo: '🐰',
-    Reptil: '🦎'
-  };
-
-  function leerAlmacenamiento(clave, valorPorDefecto) {
+function leerAlmacenamiento(clave, valorPorDefecto) {
     try {
       return JSON.parse(localStorage.getItem(clave) || JSON.stringify(valorPorDefecto));
     } catch (error) {
@@ -101,7 +92,6 @@
     CLAVES_ALMACENAMIENTO,
     HORARIOS_DISPONIBLES,
     HORARIOS_BLOQUEADOS,
-    ICONOS_ESPECIE,
     leerAlmacenamiento,
     guardarAlmacenamiento,
     eliminarAlmacenamiento,

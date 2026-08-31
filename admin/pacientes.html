@@ -1,153 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Panel administrativo de VetLife" name="description" />
-    <title>
-        Pacientes | Vetlife
-    </title>
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="../assets/css/estilos.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gestión de pacientes del panel administrativo de VetLife">
+    <title>Pacientes | VetLife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../assets/css/estilos.css" rel="stylesheet">
 </head>
 
 <body class="admin-fondo" data-admin-pagina="pacientes" data-requiere="administrador">
     <div class="d-flex admin-layout">
         <aside class="admin-sidebar d-flex flex-column flex-shrink-0 p-3" id="barraLateralAdmin">
             <a class="d-flex align-items-center gap-2 text-white mb-4" href="dashboard.html">
-                <span class="brand-logo logo-admin">
-                    <i class="bi bi-heart-pulse-fill">
-                    </i>
-                </span>
-                <span class="fw-bold">
-                    VetLife
-                </span>
+                <span class="fw-bold">VetLife</span>
             </a>
-            <nav aria-label="Men&uacute; administrativo">
+            <nav aria-label="Menú administrativo">
                 <ul class="nav nav-pills flex-column gap-1">
-                    <li>
-                        <a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-dashboard"
+                    <li><a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-dashboard"
                             href="dashboard.html">
-                            <i class="bi bi-speedometer2">
-                            </i>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-citas"
-                            href="citas.html">
-                            <i class="bi bi-calendar-check">
-                            </i>
-                            Citas
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link d-flex align-items-center gap-2 px-3 py-2 active"
+                            Dashboard</a></li>
+                    <li><a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-citas"
+                            href="gestion-citas.html">
+                            Citas</a></li>
+                    <li><a class="nav-link d-flex align-items-center gap-2 px-3 py-2 active"
                             data-pagina-nav="admin-pacientes" href="pacientes.html">
-                            <i class="bi bi-heart-pulse">
-                            </i>
-                            Pacientes
-                        </a>
-                    </li>
-                    <li>
-                        <a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-servicios"
-                            href="servicios.html">
-                            <i class="bi bi-clipboard2-pulse">
-                            </i>
-                            Servicios
-                        </a>
-                    </li>
+                            Pacientes</a></li>
+                    <li><a class="nav-link d-flex align-items-center gap-2 px-3 py-2" data-pagina-nav="admin-servicios"
+                            href="gestion-servicios.html">
+                            Servicios</a></li>
                 </ul>
             </nav>
             <div class="mt-auto pt-3 border-top border-secondary-subtle">
                 <a class="nav-link px-3 py-2" href="../index.html">
-                    <i class="bi bi-box-arrow-up-right me-2">
-                    </i>
-                    Ir al sitio web
-                </a>
+                    Ir al sitio web</a>
             </div>
         </aside>
         <div class="position-fixed top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 d-none superposicion-admin"
-            id="superposicionAdmin">
-        </div>
+            id="superposicionAdmin"></div>
+
         <div class="admin-contenido d-flex flex-column">
             <header class="admin-barra d-flex align-items-center justify-content-between px-3 px-lg-4 sticky-top">
-                <button aria-label="Abrir men&uacute;" class="btn btn-light border d-md-none" id="botonMenuAdmin"
-                    type="button">
-                    <i class="bi bi-list">
-                    </i>
-                </button>
-                <div>
-                </div>
+                <button class="btn btn-light border d-md-none" id="botonMenuAdmin" type="button"
+                    aria-label="Abrir menú">Menú</button>
+                <div></div>
                 <div class="d-flex align-items-center gap-2">
                     <span
-                        class="avatar-admin rounded-circle bg-principal-suave text-principal d-inline-flex align-items-center justify-content-center fw-bold">
-                        DR
-                    </span>
+                        class="avatar-admin rounded-circle bg-primary-subtle text-primary d-inline-flex align-items-center justify-content-center fw-bold">DR</span>
                     <div class="d-none d-sm-block">
-                        <div class="small fw-semibold">
-                            Dra. Ram&iacute;rez
-                        </div>
-                        <div class="small text-secondary">
-                            Administrador
-                        </div>
+                        <div class="small fw-semibold">Dra. Ramírez</div>
+                        <div class="small text-secondary">Administrador</div>
                     </div>
                 </div>
             </header>
+
             <main class="container-fluid p-4 p-lg-5">
                 <header class="mb-4">
-                    <h1 class="display-6 font-heading">
-                        Pacientes
-                    </h1>
-                    <p class="text-secondary mb-0">
-                        Consulta la ficha de las mascotas atendidas.
-                    </p>
+                    <h1 class="display-6">Pacientes</h1>
+                    <p class="text-secondary mb-0">Consulta rápidamente la información de las mascotas atendidas.</p>
                 </header>
-                <div class="d-flex flex-column flex-lg-row gap-2 justify-content-between mb-4">
-                    <div class="d-flex flex-wrap gap-2">
-                        <button class="btn btn-sm btn-vet-primary" data-filtro-especie="todas">
-                            Todas
-                        </button>
-                        <button class="btn btn-sm btn-vet-soft" data-filtro-especie="Perro">
-                            🐶 Perro
-                        </button>
-                        <button class="btn btn-sm btn-vet-soft" data-filtro-especie="Gato">
-                            🐱 Gato
-                        </button>
-                        <button class="btn btn-sm btn-vet-soft" data-filtro-especie="Ave">
-                            🦜 Ave
-                        </button>
-                        <button class="btn btn-sm btn-vet-soft" data-filtro-especie="Conejo">
-                            🐰 Conejo
-                        </button>
-                        <button class="btn btn-sm btn-vet-soft" data-filtro-especie="Reptil">
-                            🦎 Reptil
-                        </button>
+
+                <section class="card shadow-sm mb-4" aria-labelledby="tituloFiltrosPacientes">
+                    <div class="card-body">
+                        <h2 id="tituloFiltrosPacientes" class="h5 mb-3">Buscar pacientes</h2>
+                        <div class="row g-3 align-items-end">
+                            <div class="col-lg-7">
+                                <label for="buscarPaciente" class="form-label">Paciente, propietario o raza</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                    </span>
+                                    <input class="form-control" id="buscarPaciente" type="search"
+                                        placeholder="Ej. Luna, María o Labrador">
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <label for="filtroEspecie" class="form-label">Especie</label>
+                                <select class="form-select" id="filtroEspecie">
+                                    <option value="todas">Todas las especies</option>
+                                    <option value="Perro">Perro</option>
+                                    <option value="Gato">Gato</option>
+                                    <option value="Ave">Ave</option>
+                                    <option value="Conejo">Conejo</option>
+                                    <option value="Reptil">Reptil</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <input class="form-control ancho-buscador-pacientes" id="buscarPaciente"
-                        placeholder="Buscar paciente, propietario o raza" />
-                </div>
-                <div class="row g-4">
-                    <section class="col-xl-8">
-                        <div class="row row-cols-1 row-cols-md-2 g-3" id="gridPacientes">
-                        </div>
-                    </section>
-                    <aside class="col-xl-4">
-                        <div class="card tarjeta-vet detalle-panel p-4 d-none" id="detallePaciente">
-                        </div>
-                    </aside>
-                </div>
+                </section>
+
+                <section aria-labelledby="tituloListaPacientes">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h2 id="tituloListaPacientes" class="h5 mb-0">Pacientes registrados</h2>
+                        <span id="contadorPacientes" class="badge text-bg-secondary">0 pacientes</span>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" id="gridPacientes"></div>
+                </section>
             </main>
         </div>
     </div>
-    <div class="toast-vet" id="contenedorToast">
+
+    <div class="modal fade" id="modalPaciente" tabindex="-1" aria-labelledby="tituloModalPaciente" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalPaciente">Ficha del paciente</h2>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-dismiss="modal"
+                        aria-label="Cerrar">Cerrar</button>
+                </div>
+                <div class="modal-body" id="detallePaciente"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYjR+WVcXK/BmnVDxM+D2scQbITxI"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-        </script>
+
+    <div class="position-fixed end-0 bottom-0 m-3" id="contenedorToast"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="../assets/js/datos.js"></script>
     <script src="../assets/js/utilidades.js"></script>
     <script src="../assets/js/autenticacion.js"></script>
