@@ -33,8 +33,11 @@
               (servicio) => `
             <article class="col">
               <div class="card shadow-sm h-100">
-                <div class="card-body p-4">
-                  <h2 class="h5">${escaparHtml(servicio.nombre)}</h2>
+                  <div class="card-body p-4">
+                      <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary mb-3" style="width:48px;height:48px;">
+                          <i class="bi ${escaparHtml(servicio.icono || "bi-heart-pulse")} fs-4"></i>
+                              </div>
+                          <h2 class="h5">${escaparHtml(servicio.nombre)}</h2>
                   <p class="small text-secondary mb-3">Atención veterinaria con seguimiento profesional y registro digital.</p>
                   <div class="d-flex justify-content-between small">
                     <span>${escaparHtml(formatearDuracion(servicio.duracion))}</span>
@@ -51,25 +54,28 @@
       .join("");
   }
 
-  function configurarInicio() {
-    const contenedorServicios = document.getElementById("serviciosInicio");
-    if (contenedorServicios) {
-      contenedorServicios.innerHTML = obtenerServicios()
-        .filter((servicio) => servicio.activo)
-        .slice(0, 6)
-        .map(
-          (servicio) => `
-          <div class="col">
-            <div class="card shadow-sm h-100">
-              <div class="card-body p-4">
-                <h3 class="h6">${escaparHtml(servicio.nombre)}</h3>
-                <p class="small text-secondary mb-0">${escaparHtml(servicio.categoria)}</p>
+function configurarInicio() {
+  const contenedorServicios = document.getElementById("serviciosInicio");
+  if (contenedorServicios) {
+    contenedorServicios.innerHTML = obtenerServicios()
+      .filter((servicio) => servicio.activo)
+      .slice(0, 6)
+      .map(
+        (servicio) => `
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary-subtle text-primary mb-3" style="width:48px;height:48px;">
+                <i class="bi ${escaparHtml(servicio.icono || "bi-heart-pulse")} fs-4"></i>
               </div>
+              <h3 class="h6">${escaparHtml(servicio.nombre)}</h3>
+              <p class="small text-secondary mb-0">${escaparHtml(servicio.categoria)}</p>
             </div>
-          </div>`,
-        )
-        .join("");
-    }
+          </div>
+        </div>`,
+      )
+      .join("");
+  }
 
     const contenedorPasos = document.getElementById("pasosInicio");
     if (contenedorPasos) {
